@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 
 const GreetPage = () => {
   return (
-    <div className="h-full test flex items-center justify-center flex-col relative">
+    <div className="h-full test flex items-center justify-center flex-col">
       <Image
         className="w-full h-screen brightness-50 object-cover"
         src="/landing-image.jpg"
@@ -15,7 +15,7 @@ const GreetPage = () => {
         height={900}
         alt="Picture of the author"
       />
-      <div className="top-[10%] flex flex-col items-center justify-center w-2/3 md:top-80 text-white absolute md:left-20">
+      <div className="top-[35%] flex flex-col items-center justify-center w-2/3 md:top-80 text-white absolute md:left-20">
         <span className="relative text-5xl md:text-8xl sm:text-3xl">
           Precision Performance & Tailored
           <span className="bg-gradient-to-r from-red-600 via-red-350 to-red-400 inline-block text-transparent bg-clip-text">

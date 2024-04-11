@@ -1,4 +1,4 @@
-"use server";
+"use client";
 
 import { InputType, ReturnType } from "./types";
 // import { db } from "@/lib/db";

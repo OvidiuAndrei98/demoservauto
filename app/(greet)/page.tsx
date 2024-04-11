@@ -15,7 +15,7 @@ const GreetPage = () => {
         height={900}
         alt="Picture of the author"
       />
-      <div className="top-[35%] flex flex-col items-center justify-center w-2/3 md:top-80 text-white absolute md:left-20">
+      <div className="top-[20%] flex flex-col items-center justify-center w-2/3 md:top-80 text-white absolute md:left-20">
         <span className="relative text-5xl md:text-8xl sm:text-3xl">
           Precision Performance & Tailored
           <span className="bg-gradient-to-r from-red-600 via-red-350 to-red-400 inline-block text-transparent bg-clip-text">
@@ -23,7 +23,7 @@ const GreetPage = () => {
           </span>
           Excellence
         </span>
-        <div className="relative top-5 py-30 text-xl">
+        <div className="relative top-5 py-30 text-lg">
           Explore our range of services and schedule your appointment today for
           a smoother, safer ride tomorrow.
         </div>

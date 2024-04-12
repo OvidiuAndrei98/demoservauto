@@ -17,6 +17,22 @@ module.exports = {
       },
     },
     extend: {
+      transitionProperty: {
+        'diamond': 'filter, clip-path',
+      },
+      keyframes: {
+        zIndexAnimation: {
+          '0%, 100%': {
+            'z-index': 10
+          },
+        },
+      },
+      gridTemplateRows: {
+        'diamond': 'repeat(3, var(--diamond-image-size))',
+      },
+      gridTemplateColumns: {
+        'diamond': 'repeat(6, var(--diamond-image-size))',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

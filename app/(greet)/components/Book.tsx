@@ -60,25 +60,25 @@ export const Book = forwardRef(() => {
   };
 
   return (
-    <div className="my-20 relative h-auto w-full">
+    <div className="my-20 relative h-[700px] w-full md:flex">
       <Image
-        className="object-cover bg-no-repeat bg-center w-full h-[400px]"
+        className="object-cover bg-no-repeat bg-center w-full h-[400px] md:flex-[0_0_65%] md:h-[700px]"
         src="/about-large.jpg"
         width={900}
         height={900}
         alt="Picture of the author"
       />
-      <div className="bg-white relative mt-[-200px] max-w-[350px] self-center m-auto p-[20px] rounded-lg">
+      <div className="bg-white relative mt-[-200px] max-w-[350px] self-center m-auto p-[20px] rounded-lg md:max-w-full md:mt-auto md:h-[95%] md:ml-[-200px]">
         <span className="text-2xl font-bold">
           Ofera-ne cateva detalii si solicita o programare!
         </span>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 my-5">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 my-5 md:h-[90%] md:grid md:grid-rows-[100px 100px 100px 100px 1fr] md:grid-cols-2 md:gap-2">
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="md:mt-5">
                   <FormLabel>Nume</FormLabel>
                   <FormControl>
                     <Input placeholder="Nume" {...field} className="bg-gray-100" />
@@ -135,7 +135,7 @@ export const Book = forwardRef(() => {
               control={form.control}
               name="description"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="md:col-span-2">
                   <FormLabel>Detalii</FormLabel>
                   <FormControl>
                     <Textarea
@@ -147,7 +147,7 @@ export const Book = forwardRef(() => {
                 </FormItem>
               )}
             />
-            <Button className="bg-red-600" type="submit">
+            <Button className="bg-red-600 md:row-start-4 md:col-span-1" type="submit">
               Solicita programare
             </Button>
           </form>

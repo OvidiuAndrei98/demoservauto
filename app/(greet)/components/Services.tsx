@@ -13,7 +13,7 @@ const Services = () => {
       <div className="text-5xl whitespace-pre-line text-center">
         We are specialists in following services
       </div>
-      <div className="my-10 flex flex-col space-y-10">
+      <div className="my-10 flex flex-col space-y-10 md:space-y-0 md:flex-row md:space-x-10">
         <Card className="max-w-100 hover:bg-[url('/engine-card.jpg')] hover:brightness-75 hover:text-white  bg-cover h-[200px] flex flex-col justify-between">
           <CardHeader>
             <CardTitle>Engine Repairs</CardTitle>
@@ -29,7 +29,7 @@ const Services = () => {
       />
           </CardFooter>
         </Card>
-        <Card className="bg-white h-[200px] flex flex-col justify-between">
+        <Card className="max-w-100 hover:bg-[url('/engine-card.jpg')] hover:brightness-75 hover:text-white  bg-cover h-[200px] flex flex-col justify-between">
           <CardHeader>
             <CardTitle>Engine Repairs</CardTitle>
           </CardHeader>
@@ -44,7 +44,7 @@ const Services = () => {
       />
           </CardFooter>
         </Card>
-        <Card className="max-w-100 bg-white h-[200px] flex flex-col justify-between">
+        <Card className="max-w-100 hover:bg-[url('/engine-card.jpg')] hover:brightness-75 hover:text-white  bg-cover h-[200px] flex flex-col justify-between">
           <CardHeader>
             <CardTitle>Engine Repairs</CardTitle>
           </CardHeader>

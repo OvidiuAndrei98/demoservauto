@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="w-full pt-[50px] p-10 h-auto bg-black flex flex-col items-center">
       <div className="text-white text-4xl">
-        Exel<span className="text-red-600">Exis</span>
+        Safe<span className="text-red-600">House</span>
       </div>
       <div className="flex justify-around w-full mt-5 flex-wrap">
         <div className="text-white">

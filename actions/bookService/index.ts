@@ -1,61 +1,26 @@
-"use client";
-
+"use server";
 import { InputType, ReturnType } from "./types";
-// import { db } from "@/lib/db";
+import { db } from "@/lib/db";
 import { revalidatePath } from "next/cache";
 import { createSafeAction } from "@/lib/createSafeAction";
 import { BookService } from "./schema";
-// import { createAuditLog } from "@/lib/createAuditLog";
-// import { ENTITY_TYPE, ACTION } from "@prisma/client";
 
 const handler = async (data: InputType): Promise<ReturnType> => {
 
   const { name, email, phone, service, description } = data;
 
-  let book;
+  let appointment;
 
   try {
-//     const list = await db.list.findUnique({
-//       where: {
-//         id: listId,
-//         board: {
-//           orgId,
-//         },
-//       }
-//     })
-    
-//     if(!list) {
-//       return {
-//         error: "List not found"
-//       }
-//     }
-
-
-    // const lastCard = await db.card.findFirst({
-    //   where: { listId },
-    //   orderBy: { order: "desc" },
-    //   select: { order: true },
-    // })
-
-    // const newOrder = lastCard ? lastCard.order + 1 : 1;
-
-    // card = await db.card.create({
-    //   data: {
-    //     title,
-    //     listId,
-    //     order: newOrder,
-    //   },
-    // });
-
-
-    
-
-    // await createAuditLog({
-    //   entityId: card.id,
-    //   entityTitle: card.title,
-    //   entityType: ENTITY_TYPE.CARD,
-    //   action: ACTION.CREATE,
-    // })
+     appointment = await db.appointment.create({
+      data: {
+       name,
+       email,
+       phone,
+       service,
+       description
+      },
+    });
 
   } catch (error) {
     return {
@@ -64,7 +29,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
   }
 
   revalidatePath(`/`);
-  return { data: book };
+  return { data: appointment };
 };
 
 export const bookService = createSafeAction(BookService, handler);

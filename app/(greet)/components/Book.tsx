@@ -4,7 +4,6 @@ import Image from "next/image";
 import { bookService } from "@/actions/bookService";
 import { Button } from "@/components/ui/button";
 import { useAction } from "@/hooks/useAction";
-import { Plus, X } from "lucide-react";
 import { useParams } from "next/navigation";
 import { ElementRef, forwardRef, useRef } from "react";
 import { toast } from "sonner";
@@ -56,7 +55,7 @@ export const Book = forwardRef(() => {
 
   const onSubmit = (formData: z.infer<typeof BookService>) => {
     toast.success("a mers");
-    //   execute({ title, listId, boardId });
+      execute(formData);
   };
 
   return (

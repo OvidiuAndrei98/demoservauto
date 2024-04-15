@@ -21,12 +21,12 @@ import { z } from "zod";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-  } from "@/components/ui/select"
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export const Book = forwardRef(() => {
   const form = useForm<z.infer<typeof BookService>>({
@@ -54,8 +54,7 @@ export const Book = forwardRef(() => {
   });
 
   const onSubmit = (formData: z.infer<typeof BookService>) => {
-    toast.success("a mers");
-      execute(formData);
+    execute(formData);
   };
 
   return (
@@ -72,7 +71,10 @@ export const Book = forwardRef(() => {
           Ofera-ne cateva detalii si solicita o programare!
         </span>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 my-5 md:h-[90%] md:grid md:grid-rows-[100px 100px 100px 100px 1fr] md:grid-cols-2 md:gap-2">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="space-y-5 my-5 md:h-[90%] md:grid md:grid-rows-[100px 100px 100px 100px 1fr] md:grid-cols-2 md:gap-2"
+          >
             <FormField
               control={form.control}
               name="name"
@@ -80,7 +82,11 @@ export const Book = forwardRef(() => {
                 <FormItem className="md:mt-5">
                   <FormLabel>Nume</FormLabel>
                   <FormControl>
-                    <Input placeholder="Nume" {...field} className="bg-gray-100" />
+                    <Input
+                      placeholder="Nume"
+                      {...field}
+                      className="bg-gray-100"
+                    />
                   </FormControl>
                 </FormItem>
               )}
@@ -92,7 +98,11 @@ export const Book = forwardRef(() => {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="Email" {...field} className="bg-gray-100"/>
+                    <Input
+                      placeholder="Email"
+                      {...field}
+                      className="bg-gray-100"
+                    />
                   </FormControl>
                 </FormItem>
               )}
@@ -104,7 +114,11 @@ export const Book = forwardRef(() => {
                 <FormItem>
                   <FormLabel>Telefon</FormLabel>
                   <FormControl>
-                    <Input placeholder="Telefon" {...field} className="bg-gray-100"/>
+                    <Input
+                      placeholder="Telefon"
+                      {...field}
+                      className="bg-gray-100"
+                    />
                   </FormControl>
                 </FormItem>
               )}
@@ -116,7 +130,10 @@ export const Book = forwardRef(() => {
                 <FormItem>
                   <FormLabel>Serviciu</FormLabel>
                   <FormControl>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
                       <SelectTrigger className="bg-gray-100">
                         <SelectValue placeholder="Selecteaza serviciu" />
                       </SelectTrigger>
@@ -146,7 +163,10 @@ export const Book = forwardRef(() => {
                 </FormItem>
               )}
             />
-            <Button className="bg-red-600 md:row-start-4 md:col-span-1" type="submit">
+            <Button
+              className="bg-red-600 md:row-start-4 md:col-span-1"
+              type="submit"
+            >
               Solicita programare
             </Button>
           </form>

@@ -1,9 +1,9 @@
 import { z } from "zod";
-import { BookService } from "./schema";
+import { BookService } from "../bookService/schema";
 import { ActionState } from "@/lib/createSafeAction";
 // import { Card } from "@prisma/client";
 
-export type InputType = z.infer<typeof BookService>;
+export type InputType = {};
 export type ReturnType = ActionState<
   InputType,
   {
@@ -13,5 +13,5 @@ export type ReturnType = ActionState<
     service: string;
     description: string;
     status: string;
-  }
+  }[]
 >;

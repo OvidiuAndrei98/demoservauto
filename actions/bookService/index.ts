@@ -14,7 +14,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
     const dbs = await client.db("safehouse");
     const coll = dbs.collection("appointment");
-    await coll.insertOne(data);
+    await coll.insertOne({ ...data, status: "In asteptare" });
   } catch (error) {
     return {
       error: error as string,
@@ -33,6 +33,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
       name: "test",
       phone: "test",
       service: "test",
+      status: "onHold",
     },
   };
 };

@@ -40,7 +40,6 @@ export const Book = forwardRef(() => {
     },
   });
 
-  const params = useParams();
   const formRef = useRef<ElementRef<"form">>(null);
 
   const { execute, fieldErrors } = useAction(bookService, {

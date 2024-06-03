@@ -5,6 +5,7 @@ import Image from "next/image";
 const ChoseUs = () => {
   return (
     <div
+    id="about-section"
       className=" flex flex-col py-5 px-[30px] md:flex-row md:px-[10%] gap-10 items-center justify-center relative h-auto w-full bg-[url('/about-cover.jpg')]
     bg-cover
     bg-no-repeat
@@ -52,19 +53,18 @@ const ChoseUs = () => {
         </div>
       </div>
       <div className="z-10 text-white relative h-auto py-5 w-full flex flex-col items-start">
-        <h1 className="text-4xl font-semibold">Why chose us</h1>
+        <h1 className="text-4xl font-semibold">De ce să ne alegeți pe noi</h1>
         <span className="my-3 text-white-300 opacity-[.8] font-nomral">
-          Chose us for a seamless automotive experience - where expertise meets
-          excellemce. With a commitment to quality and customer satisfaction
+        Alegeți-ne pentru o experiență auto fără cusur - acolo unde expertiza întâlnește excelența. Cu un angajament pentru calitate și satisfacția clienților.
         </span>
         <IconTextItem
           src="/mechanic-icon.png"
-          text="Certified Expert Mechanics"
+          text="Mecanici Experți Certificați"
         />
         <Separator />
-        <IconTextItem src="/tool-icon.png" text="Fast And Quality Service" />
+        <IconTextItem src="/tool-icon.png" text="Servicii rapide și de calitate" />
         <Separator />
-        <IconTextItem src="/discount-icon.png" text="Best Prices In Town" />
+        <IconTextItem src="/discount-icon.png" text="Cele mai bune prețuri din oraș" />
       </div>
     </div>
   );

@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-
-import { Inter as FontSans, Noto_Sans, Poppins, Roboto_Condensed, Roboto_Flex, Roboto_Serif, Roboto_Slab } from "next/font/google"
-
+import {
+  Inter as FontSans,
+  Noto_Sans,
+  Poppins,
+  Roboto_Condensed,
+  Roboto_Flex,
+  Roboto_Serif,
+  Roboto_Slab,
+} from "next/font/google";
 
 const notto = Roboto_Flex({
   subsets: ["latin"],
@@ -12,10 +18,10 @@ const notto = Roboto_Flex({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Exelexis',
-    template: `%s | Exelexis`
+    default: 'SafeHouseMotorSport',
+    template: `%s | SafeHouseMotorSport`
   },
-  description: 'Demo description',
+  description: "SafeHouse MotorSport",
   // icons: [
   //   {
   //     url: '/CleanCode.svg',
@@ -30,12 +36,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+          rel="stylesheet"
+        />
       </head>
-      <body className={`${notto.className} select-none min-w-32`}>{children}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+      <body className={`${notto.className} select-none min-w-32`}>
+        {children}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
       </body>
     </html>
   );

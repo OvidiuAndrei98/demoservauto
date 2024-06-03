@@ -1,21 +1,21 @@
 import IconTextItem from "@/components/IconTextItem";
 import Image from "next/image";
 
-const Contact = () => {
+const Contact = ({scrollHandler}: {scrollHandler: string}) => {
   return (
-    <div className="w-full md:flex md:flex-row-reverse md:mb-20 md:h-[450px]">
-      <div className="bg-red-700 full flex flex-col items-center h-full py-10 px-5 text-white md:flex-[0_0_55%]">
+    <div id={scrollHandler} className="w-full md:flex md:flex-row-reverse md:mb-20 md:h-[450px]">
+      <div id="contat-subsection" className="bg-red-700 full flex flex-col items-center h-full py-10 px-5 text-white md:flex-[0_0_55%]">
         <div className="text-3xl mb-5">Nu ezita sa ne contactezi</div>
         <div className="md:flex md:flex-row md:justify-around md:w-full md:mt-10">
           <div className="flex flex-col items-center">
             <div className="text-xl mb-2">Program</div>
             <div className="flex space-x-10">
               <div className="flex flex-col mb-5">
-                <div>Luni - Sambata</div>
+                <div>Luni - Vineri</div>
                 <div>09:00 - 18:00</div>
               </div>
               <div>
-                <div>Duminica</div>
+                <div>Sambata/Duminica</div>
                 <div>Inchis</div>
               </div>
             </div>
@@ -26,24 +26,24 @@ const Contact = () => {
               <div className="flex flex-col mb-5">
                 <IconTextItem
                   src="/pin-icon.png"
-                  text="Strada Adresa Nr.3, Bucuresti, Sector 3"
+                  text="Pericle Papahagi 4, Bucuresti, Romania"
                   font="normal"
                   margin="2"
-                  size="md"
+                  textSize="md"
                 />
                 <IconTextItem
                   src="/email-icon.png"
                   text="info@safehousemotorsport.ro"
                   font="normal"
                   margin="2"
-                  size="md"
+                  textSize="md"
                 />
                 <IconTextItem
                   src="/phone-icon.png"
-                  text="0743 555 444"
+                  text="0729 962 758"
                   font="normal"
                   margin="2"
-                  size="md"
+                  textSize="md"
                 />
               </div>
             </div>

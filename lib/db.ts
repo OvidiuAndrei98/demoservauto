@@ -1,11 +1,16 @@
-import { PrismaClient } from "@prisma/client";
+// import { PrismaClient } from "@prisma/client";
 
-declare global {
-  var db: PrismaClient | undefined;
-}
+const uri =
+  "mongodb+srv://andreipenica:kRUEciFKgAKl5ll7@safehouse.effpn7z.mongodb.net/?retryWrites=true&w=majority&appName=safehouse";
 
-export const db = globalThis.db || new PrismaClient();
+// declare global {
+//   var db: MongoClient | undefined;
+// }
 
-if (process.env.NODE_ENV !== "production") {
-  globalThis.db = db;
-}
+// export const db = globalThis.db || new PrismaClient();
+const { MongoClient } = require("mongodb");
+export const client = new MongoClient(uri);
+
+// if (process.env.NODE_ENV !== "production") {
+//   globalThis.db = db;
+// }

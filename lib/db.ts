@@ -1,7 +1,7 @@
 // import { PrismaClient } from "@prisma/client";
 
 const uri =
-  "mongodb+srv://andreipenica:kRUEciFKgAKl5ll7@safehouse.effpn7z.mongodb.net/?retryWrites=true&w=majority&appName=safehouse";
+ 
 
 // declare global {
 //   var db: MongoClient | undefined;

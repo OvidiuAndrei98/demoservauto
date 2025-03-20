@@ -83,10 +83,10 @@ const Footer = () => {
       <div className="text-gray-300 opacity-[0.5] text-sm">
         Made by{" "}
         <span
-          onClick={() => URL("https://www.instagram.com/andreipenica/")}
+          onClick={() => URL("https://www.code-lab.ro.com/")}
           className="text-red-600 cursor-pointer"
         >
-          AndreiPenica
+          CodeLab
         </span>
         .
       </div>

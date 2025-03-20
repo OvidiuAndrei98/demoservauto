@@ -8,7 +8,7 @@ const uri =
 // }
 
 // export const db = globalThis.db || new PrismaClient();
-const { MongoClient } = require("mongodb");
+const MongoClient = require("mongodb");
 export const client = new MongoClient(uri);
 
 // if (process.env.NODE_ENV !== "production") {
